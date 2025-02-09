@@ -8,8 +8,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
-	"your_project/database"
-	"your_project/models"
+	"github.com/illegalcall/go-react-todo/server/database"
+	"github.com/illegalcall/go-react-todo/server/models"
 )
 
 // GetTodos retrieves all todos

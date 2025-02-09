@@ -8,6 +8,8 @@ A modern, full-stack todo application built with Go and React, featuring real-ti
 - **Fiber** - Web framework
 - **MongoDB** - Database
 - **godotenv** - Environment management
+- **testify** - Testing framework
+- **mtest** - MongoDB mocking for tests
 
 ### Frontend
 - **React** - UI library
@@ -24,6 +26,7 @@ A modern, full-stack todo application built with Go and React, featuring real-ti
 - 🔒 Environment variable configuration
 - 🌐 CORS enabled for local development
 - 📊 MongoDB Atlas integration
+- 🧪 Comprehensive test coverage for API endpoints
 
 ## 🛠️ Installation
 
@@ -102,6 +105,37 @@ A modern, full-stack todo application built with Go and React, featuring real-ti
 | POST   | /api/todos      | Create new todo  |
 | PATCH  | /api/todos/:id  | Update todo      |
 | DELETE | /api/todos/:id  | Delete todo      |
+
+## 🧪 Running Tests
+
+```bash
+# Run all tests
+cd server
+go test ./...
+
+# Run tests with coverage report
+go test ./... -cover
+
+# Run specific test file
+go test ./handlers/todos_test.go
+```
+
+### Test Coverage
+
+The backend API includes comprehensive test cases covering:
+
+- ✅ GET /api/todos
+  - Empty database response
+  - Database error handling
+- ✅ POST /api/todos
+  - Empty request body validation
+  - Invalid JSON handling
+- ✅ PATCH /api/todos/:id
+  - Invalid ID validation
+  - Database failure handling
+- ✅ DELETE /api/todos/:id
+  - Invalid ID validation
+  - Database failure handling
 
 ## 💡 Contributing
 
